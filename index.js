@@ -102,7 +102,9 @@ app.get('/order',verifyJWT ,async(req,res)=>{
     }
 }
 run().catch(console.dir);
-
+app.get('/',(req,res)=>{
+    res.send('server is running');
+ });
 app.listen(port,()=>{
     console.log(' genius server running');
 });
